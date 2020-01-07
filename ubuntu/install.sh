@@ -77,28 +77,28 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # install golang
 ./install_go.sh
 
-# install go binaries
-go install github.com/zmb3/gogetdoc
-go install golang.org/x/tools/cmd/guru
-go install golang.org/x/tools/gopls@latest
-go install github.com/davidrjenni/reftools/cmd/fillstruct
-go install github.com/rogpeppe/godef
-go install github.com/fatih/motion
-go install github.com/kisielk/errcheck
-go install github.com/go-delve/delve/cmd/dlv
-go install github.com/mdempsky/gocode
-go install github.com/josharian/impl
-go install github.com/golangci/golangci-lint/cmd/golangci-lint
-go install github.com/jstemmer/gotags
-go install golang.org/x/tools/cmd/gorename
-go install golang.org/x/tools/cmd/goimports
-go install github.com/stamblerre/gocode
-go install github.com/fatih/gomodifytags
-go install honnef.co/go/tools/cmd/keyify
-go install golang.org/x/lint/golint
-go install github.com/koron/iferr
-go install github.com/klauspost/asmfmt/cmd/asmfmt
-go install github.com/alecthomas/gometalinter
+# # install go binaries
+# go install github.com/zmb3/gogetdoc
+# go install golang.org/x/tools/cmd/guru
+# go install golang.org/x/tools/gopls@latest
+# go install github.com/davidrjenni/reftools/cmd/fillstruct
+# go install github.com/rogpeppe/godef
+# go install github.com/fatih/motion
+# go install github.com/kisielk/errcheck
+# go install github.com/go-delve/delve/cmd/dlv
+# go install github.com/mdempsky/gocode
+# go install github.com/josharian/impl
+# go install github.com/golangci/golangci-lint/cmd/golangci-lint
+# go install github.com/jstemmer/gotags
+# go install golang.org/x/tools/cmd/gorename
+# go install golang.org/x/tools/cmd/goimports
+# go install github.com/stamblerre/gocode
+# go install github.com/fatih/gomodifytags
+# go install honnef.co/go/tools/cmd/keyify
+# go install golang.org/x/lint/golint
+# go install github.com/koron/iferr
+# go install github.com/klauspost/asmfmt/cmd/asmfmt
+# go install github.com/alecthomas/gometalinter
 
 # install docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" \
@@ -108,13 +108,13 @@ sudo curl -L https://raw.githubusercontent.com/docker/compose/1.24.1/contrib/com
     -o /etc/bash_completion.d/docker-compose
 
 ## Desktop Apps
-sudo apt-get install -yy shutter # screenshot capture sw
-sudo apt-get install -yy fluxgui # eye protection sw
-sudo apt-get install -yy meld # file diff comparer sw
-sudo apt-get install -yy google-chrome-stable
-sudo apt-get install -yy grub-customizer
-sudo apt-get install -yy gnome-tweak-tool
-sudo snap install telegram-desktop
+#sudo apt-get install -yy shutter # screenshot capture sw
+#sudo apt-get install -yy fluxgui # eye protection sw
+#sudo apt-get install -yy meld # file diff comparer sw
+#sudo apt-get install -yy google-chrome-stable
+#sudo apt-get install -yy grub-customizer
+#sudo apt-get install -yy gnome-tweak-tool
+#sudo snap install telegram-desktop
 
 ## Other Options
 # switch from wayland to xorg in ubuntu 17 for shutter to work
@@ -126,29 +126,29 @@ sudo groupadd docker
 sudo usermod -aG docker $(whoami)
 
 # change default resolution of grub menu on bootup
-sudo sed 's/#GRUB_GFXMODE="[[:digit:]]\+x[[:digit:]]\+"/GRUB_GFXMODE="640x480"/' /etc/default/grub
-sudo update-grub
+#sudo sed 's/#GRUB_GFXMODE="[[:digit:]]\+x[[:digit:]]\+"/GRUB_GFXMODE="640x480"/' /etc/default/grub
+#sudo update-grub
 
 # git configurations
-git config --global user.email "preslav@pmihaylov.com"
-git config --global user.name "PreslavMihaylov"
+git config --global user.email "chengdong.li@walmart.com"
+git config --global user.name "Alex Li"
 git config --system core.editor "vim"
 
 # add bulgarian phonetic keyboard input
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'bg+phonetic')]"
+#gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'bg+phonetic')]"
 
 # clicking on app in dock minimizes it
-gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
+#gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
 
 # set terminal background color to match vim molokai colorscheme
-PROF_ID=$(dconf list /org/gnome/terminal/legacy/profiles:/ | sed -n 2p)
-dconf write /org/gnome/terminal/legacy/profiles:/${PROF_ID}background-color "'rgb(28, 28, 28)'"
+#PROF_ID=$(dconf list /org/gnome/terminal/legacy/profiles:/ | sed -n 2p)
+#dconf write /org/gnome/terminal/legacy/profiles:/${PROF_ID}background-color "'rgb(28, 28, 28)'"
 
 # set default wallpaper
-mkdir -p $HOME/Pictures/Wallpapers
-cp ./default_wallpaper.jpg $HOME/Pictures/Wallpapers/
-gsettings set org.gnome.desktop.background picture-uri \
-    "file://$HOME/Pictures/Wallpapers/default_wallpaper.jpg"
+#mkdir -p $HOME/Pictures/Wallpapers
+#cp ./default_wallpaper.jpg $HOME/Pictures/Wallpapers/
+#gsettings set org.gnome.desktop.background picture-uri \
+#    "file://$HOME/Pictures/Wallpapers/default_wallpaper.jpg"
 
 # change ubuntu computer name
 hostnamectl set-hostname 'winterfell'
