@@ -72,7 +72,7 @@ sudo apt-get install -yy containerd.io
 
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+~/.fzf/install -yy
 
 # install golang
 ./install_go.sh
@@ -99,6 +99,11 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # go install github.com/koron/iferr
 # go install github.com/klauspost/asmfmt/cmd/asmfmt
 # go install github.com/alecthomas/gometalinter
+
+# install bazel
+curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+sudo apt update && sudo apt install bazel -yy
 
 # install docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" \
