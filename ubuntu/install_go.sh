@@ -1,6 +1,7 @@
 #!/bin/bash
 
 GO_VERSION=1.13.5
+# GO_VERSION=1.12.6
 GO_FOLDER=go${GO_VERSION}.linux-amd64
 GO_ARC=${GO_FOLDER}.tar.gz
 GO_LOC=/usr/local

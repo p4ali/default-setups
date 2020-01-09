@@ -105,6 +105,25 @@ curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
 echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
 sudo apt update && sudo apt install bazel -yy
 
+# install graphviz
+sudo apt update && sudo apt install graphviz xdot
+
+# install dependencies for envoy
+sudo apt-get install \
+   libtool \
+   cmake \
+   automake \
+   autoconf \
+   make \
+   ninja-build \
+   curl \
+   unzip \
+   virtualenv -yy
+
+# install go binaries
+go get -u github.com/bazelbuild/buildtools/buildifier
+go get -u github.com/bazelbuild/buildtools/buildozer
+
 # install docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" \
     -o /usr/local/bin/docker-compose

@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
     envoy.vm.hostname = "envoy"
     envoy.vm.network "private_network", ip: "192.168.33.3"
     envoy.vm.provider "virtualbox" do |vb|
-      vb.memory = "4096"
+      vb.memory = "8192"
     end
   end
 end
