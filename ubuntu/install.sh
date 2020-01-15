@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 
 # Ask for sudo access at start of script
 if [ $EUID != 0 ]; then
@@ -34,8 +34,8 @@ sudo apt-get update
 ## Essential
 sudo apt-get install -yy neovim
 # migrated to neovim. Left for reference
-    # sudo apt-get install -yy vim
-    # sudo apt-get install -yy vim-gui-common
+#sudo apt-get install -yy vim
+#sudo apt-get install -yy vim-gui-common
 
 apt-get install silversearcher-ag # ag command
 sudo apt-get install -yy software-properties-common
@@ -179,5 +179,5 @@ hostnamectl set-hostname 'winterfell'
 
 # add dotfiles
 git clone --recurse-submodules https://github.com/PreslavMihaylov/dotfiles
-cd dotfiles && ./install.sh
-rm -rf dotfiles
+#cd dotfiles && ./install.sh
+rm -rf dotfile
